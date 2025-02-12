@@ -1,0 +1,84 @@
+---
+title: "Understanding My Data"
+author: "Emily Lowrimore"
+date: "2025-02-12"
+categories: [data-types]
+---
+
+# **Tracking Bighorn Sheep Movement and Behavior**
+
+## **Introduction**
+
+Before visualizing data, it is important to understand its structure and characteristics. Dr. Tamara Munzner’s framework provides a useful approach to classifying data, helping to determine the best visualization techniques. In my research on bighorn sheep ecology, I work with two distinct datasets:
+
+1.  **GPS tracking data** – spatial data that records sheep locations over time.
+
+2.  **Field observation data** – tabular data collected during direct observations of behavior and group composition.
+
+Each dataset provides different insights into habitat use, movement patterns, social dynamics, and survival. Below, I outline the key attributes of each and how they contribute to my research.
+
+## **Dataset 1: GPS Tracking Data (Spatial Data)**
+
+### **Overview**
+
+This dataset consists of GPS locations recorded from collared bighorn sheep, tracking their movements across the landscape. It allows me to analyze how individuals use different habitat types, how far they travel, and whether movement patterns change over time.
+
+```{r, locations, echo=FALSE}
+
+locations <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Locations/04.24-08.24_locations_no-cleaning.csv")
+head(locations[c(2, 6, 7, 16)], 3)
+```
+
+### **Key Attributes**
+
+-   **Location**: Latitude and longitude coordinates define each GPS point.
+
+-   **Time**: A timestamp records when each location was logged.
+
+-   **Habitat Context**: The surrounding environment (e.g., grassland, shrubland, rocky terrain) will be linked to each location.
+
+### **Potential Visualizations**
+
+Because this dataset is **spatial geometry and time-based**, effective ways to visualize it include:
+
+-   **Maps** to display movement paths.
+
+-   **Time-series plots** to track changes in movement behavior.
+
+-   **Density plots** to highlight areas of high use.
+
+
+## **Dataset 2: Field Observation Data (Tabular Data)**
+
+### **Overview**
+
+This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into **group composition, social interactions, and activity patterns**, which complement the movement data.
+
+```{r, observations, echo=FALSE}
+observations <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/observations.csv")
+head(observations[c(1, 2, 7, 9:18)], 3)
+
+resight <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/resight.csv")
+head(resight[c(2:4, 6)], 3)
+```
+
+### **Key Attributes**
+
+-   **Behavioral Observations**: Activities such as traveling, foraging, and vigilance.
+
+-   **Group Composition**: The number of individuals present, including age and sex classes.
+
+-   **Lamb Status:** Lamb status for each collared ewe to determine lamb survival.
+
+-   **Temporal Trends**: The time of day and conditions during observations.
+
+### **Potential Visualizations**
+
+Since this dataset is primarily **categorical and numerical**, useful visualizations include:
+
+-   **Bar charts** to compare behavior or survival frequencies.
+
+-   **Box plots** to show variation in group size.
+
+-   **Stacked area charts** to illustrate changes in behavior over time.
+

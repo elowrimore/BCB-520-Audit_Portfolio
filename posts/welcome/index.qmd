@@ -1,0 +1,20 @@
+---
+title: "Welcome To My Blog"
+author: "Emily Lowrimore"
+date: "2025-02-09"
+categories: []
+---
+
+### **Visualizing Data in Wildlife Research**
+
+#### **The Power of Data Visualization**
+
+Data visualization is an essential tool for understanding complex patterns, trends, and relationships within data. By transforming raw numbers into meaningful graphics, we can communicate insights more effectively and uncover patterns that might otherwise go unnoticed. One of the most influential frameworks for creating visualizations is the *Grammar of Graphics*, which provides a structured approach to building data-driven graphics. This concept, popularized through **`ggplot2`** in R, allows us to construct visualizations by layering data, aesthetic mappings, geometries, and statistical transformations.
+
+#### **My Research: Exploring Bighorn Sheep Ecology**
+
+I am a Master's student at the University of Idaho, studying bighorn sheep habitat use and population dynamics. My research focuses on how ewes' interactions with their environment influence survival, as well as how social structures impact habitat selection and population dynamics. Through this blog, I will explore data visualization techniques to analyze spatial ecology, survival, and habitat selection, demonstrating how effective visualizations can enhance ecological research.
+
+#### **What to Expect from This Blog**
+
+This blog will be a place for me to track my progress, exploration, troubleshooting, and successes with coding data visualizations. By documenting my process, I aim to create a personal reference guide to help myself navigate challenges and refine my skills. Along the way, I hope that sharing my experiences will also be helpful to others who are working with ecological data, R programming, and visualization techniques.
