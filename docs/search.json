@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Visualizing Data in Wildlife Research\n\nThe Power of Data Visualization\nData visualization is an essential tool for understanding complex patterns, trends, and relationships within data. By transforming raw numbers into meaningful graphics, we can communicate insights more effectively and uncover patterns that might otherwise go unnoticed. One of the most influential frameworks for creating visualizations is the Grammar of Graphics, which provides a structured approach to building data-driven graphics. This concept, popularized through ggplot2 in R, allows us to construct visualizations by layering data, aesthetic mappings, geometries, and statistical transformations.\n\n\nMy Research: Exploring Bighorn Sheep Ecology\nI am a Master’s student at the University of Idaho, studying bighorn sheep habitat use and population dynamics. My research focuses on how ewes’ interactions with their environment influence survival, as well as how social structures impact habitat selection and population dynamics. Through this blog, I will explore data visualization techniques to analyze spatial ecology, survival, and habitat selection, demonstrating how effective visualizations can enhance ecological research.\n\n\nWhat to Expect from This Blog\nThis blog will be a place for me to track my progress, exploration, troubleshooting, and successes with coding data visualizations. By documenting my process, I aim to create a personal reference guide to help myself navigate challenges and refine my skills. Along the way, I hope that sharing my experiences will also be helpful to others who are working with ecological data, R programming, and visualization techniques."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BCB-520-Audit: Data Visualization Blog",
+    "section": "",
+    "text": "Understanding My Data\n\n\n\n\n\n\ndata-types\n\n\n\n\n\n\n\n\n\nFeb 13, 2025\n\n\nEmily Lowrimore\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFeb 9, 2025\n\n\nEmily Lowrimore\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About This Site",
+    "section": "",
+    "text": "Hi! I’m Emily, a Master’s student at the University of Idaho working on bighorn sheep research. This blog showcases the why and how of data visualizations related to my work."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Understanding My Data",
+    "section": "",
+    "text": "Before visualizing data, it is important to understand its structure and characteristics. Dr. Tamara Munzner’s framework provides a useful approach to classifying data, helping to determine the best visualization techniques. In my research on bighorn sheep ecology, I work with two distinct datasets:\n\nGPS tracking data – spatial data that records sheep locations over time.\nField observation data – tabular data collected during direct observations of behavior and group composition.\n\nEach dataset provides different insights into habitat use, movement patterns, social dynamics, and survival. Below, I outline the key attributes of each and how they contribute to my research.\n\n\n\n\n\nThis dataset consists of GPS locations recorded from collared bighorn sheep, tracking their movements across the landscape. It allows me to analyze how individuals use different habitat types, how far they travel, and whether movement patterns change over time.\n\n\n      Acq..Time..UTC. Latitude..deg. Longitude..deg. Collar.Name\n1 2024-08-30 23:00:44       45.36915       -120.5096     White46\n2 2024-08-30 23:00:43       45.42015       -120.4926    Purple02\n3 2024-08-30 23:00:42       45.31014       -120.5707    Yellow87\n4 2024-08-30 23:00:42       45.31002       -120.5325    Yellow94\n5 2024-08-30 23:00:41       45.37524       -120.5178     White33\n6 2024-08-30 23:00:38       45.20790       -120.4905     White49\n\n\n\n\n\n\nLocation: Latitude and longitude coordinates define each GPS point.\nTime: A timestamp records when each location was logged.\nHabitat Context: The surrounding environment (e.g., grassland, shrubland, rocky terrain) will be linked to each location.\n\n\n\n\nBecause this dataset is spatial geometry and time-based, effective ways to visualize it include:\n\nMaps to display movement paths.\nTime-series plots to track changes in movement behavior.\nDensity plots to highlight areas of high use.\n\n\n\n\n\n\n\nThis dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into group composition, social interactions, and activity patterns, which complement the movement data.\n\n\n  group_id      date habitat aspect weather temp       location total ewes\n1  240520D 5/20/2024 outcrop     NE  cloudy   62 horseshoe bend     2    2\n2  240521B 5/21/2024 outcrop     SE  cloudy   52 devil's canyon     6    3\n3  240522B 5/22/2024 outcrop      N  cloudy   NA      hardstone    50   28\n  lambs year_ewes year_rams rams\n1     0         0         0    0\n2     3         0         0    0\n3    19         3         0    0\n\n\n\n\n\n\nBehavioral Observations: Activities such as traveling, foraging, and vigilance.\nGroup Composition: The number of individuals present, including age and sex classes.\nLamb Status: Lamb status for each collared ewe to determine lamb survival.\nTemporal Trends: The time of day and conditions during observations.\n\n\n\n\nSince this dataset is primarily categorical and numerical, useful visualizations include:\n\nBar charts to compare behavior or survival frequencies.\nBox plots to show variation in group size.\nStacked area charts to illustrate changes in behavior over time."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#introduction",
+    "href": "posts/post-with-code/index.html#introduction",
+    "title": "Understanding My Data",
+    "section": "",
+    "text": "Before visualizing data, it is important to understand its structure and characteristics. Dr. Tamara Munzner’s framework provides a useful approach to classifying data, helping to determine the best visualization techniques. In my research on bighorn sheep ecology, I work with two distinct datasets:\n\nGPS tracking data – spatial data that records sheep locations over time.\nField observation data – tabular data collected during direct observations of behavior and group composition.\n\nEach dataset provides different insights into habitat use, movement patterns, social dynamics, and survival. Below, I outline the key attributes of each and how they contribute to my research."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#dataset-1-gps-tracking-data-spatial-data",
+    "href": "posts/post-with-code/index.html#dataset-1-gps-tracking-data-spatial-data",
+    "title": "Understanding My Data",
+    "section": "",
+    "text": "This dataset consists of GPS locations recorded from collared bighorn sheep, tracking their movements across the landscape. It allows me to analyze how individuals use different habitat types, how far they travel, and whether movement patterns change over time.\n\n\n      Acq..Time..UTC. Latitude..deg. Longitude..deg. Collar.Name\n1 2024-08-30 23:00:44       45.36915       -120.5096     White46\n2 2024-08-30 23:00:43       45.42015       -120.4926    Purple02\n3 2024-08-30 23:00:42       45.31014       -120.5707    Yellow87\n4 2024-08-30 23:00:42       45.31002       -120.5325    Yellow94\n5 2024-08-30 23:00:41       45.37524       -120.5178     White33\n6 2024-08-30 23:00:38       45.20790       -120.4905     White49\n\n\n\n\n\n\nLocation: Latitude and longitude coordinates define each GPS point.\nTime: A timestamp records when each location was logged.\nHabitat Context: The surrounding environment (e.g., grassland, shrubland, rocky terrain) will be linked to each location.\n\n\n\n\nBecause this dataset is spatial geometry and time-based, effective ways to visualize it include:\n\nMaps to display movement paths.\nTime-series plots to track changes in movement behavior.\nDensity plots to highlight areas of high use."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html#dataset-2-field-observation-data-tabular-data",
+    "href": "posts/post-with-code/index.html#dataset-2-field-observation-data-tabular-data",
+    "title": "Understanding My Data",
+    "section": "",
+    "text": "This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into group composition, social interactions, and activity patterns, which complement the movement data.\n\n\n  group_id      date habitat aspect weather temp       location total ewes\n1  240520D 5/20/2024 outcrop     NE  cloudy   62 horseshoe bend     2    2\n2  240521B 5/21/2024 outcrop     SE  cloudy   52 devil's canyon     6    3\n3  240522B 5/22/2024 outcrop      N  cloudy   NA      hardstone    50   28\n  lambs year_ewes year_rams rams\n1     0         0         0    0\n2     3         0         0    0\n3    19         3         0    0\n\n\n\n\n\n\nBehavioral Observations: Activities such as traveling, foraging, and vigilance.\nGroup Composition: The number of individuals present, including age and sex classes.\nLamb Status: Lamb status for each collared ewe to determine lamb survival.\nTemporal Trends: The time of day and conditions during observations.\n\n\n\n\nSince this dataset is primarily categorical and numerical, useful visualizations include:\n\nBar charts to compare behavior or survival frequencies.\nBox plots to show variation in group size.\nStacked area charts to illustrate changes in behavior over time."
+  }
+]
