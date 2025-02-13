@@ -1,0 +1,83 @@
+---
+title: "Action-Target Pairs: Visualizing Bighorn Sheep Behavior"
+author: "Emily Lowrimore"
+date: "2025-02-13"
+categories: [visualisations, tidyverse]
+---
+
+```{r, setup, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(tidyverse)
+observations <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/observations.csv")
+group_behavior <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/group_behavior.csv")
+```
+
+Understanding how bighorn sheep behave in different group sizes provides insight into their survival strategies and social dynamics. Using visualization, we can explore patterns in vigilance and other behaviors to see whether larger groups of sheep exhibit different levels of attentiveness.
+
+In the field of data visualization, we use *Action-Target* pairs to define how we interact with data. Actions describe the goal—whether we are discovering new patterns, presenting findings, or exploring relationships—while targets define what aspect of the data we focus on, such as trends, attributes, or spatial relationships.
+
+### **Task Abstraction**
+
+In this post, I will construct two visualizations and define them in terms of *Action-Target* pairs:
+
+**Plot 1: Group Size vs. Number of Vigilant Individuals**
+
+-   **Action:** *Discover Trends* – I aim to explore whether vigilance increases with group size.
+
+-   **Target:** *Trends in Behavioral Data* – I will observe patterns in vigilance levels across different group sizes.
+
+**Plot 2: Group Size vs. Number of Animals Performing All Behaviors**
+
+-   **Action:** *Summarize Behavior Distribution* – I want to see the overall distribution of different behaviors as group size changes.
+
+-   **Target:** *Attributes of Behavioral Data* – This will illustrate how different behaviors scale with group size.
+
+### **Biological Context**
+
+Group living in animals is often associated with benefits such as increased predator detection and enhanced foraging efficiency. In bighorn sheep, vigilance—a behavior where individuals scan their surroundings—plays a critical role in detecting predators. However, vigilance can be costly if it takes away from time spent foraging. One hypothesis is that in larger groups, individual vigilance decreases because more animals are contributing to predator detection.
+
+By visualizing these relationships, we can determine whether vigilance is primarily driven by group size. Additionally, by looking at all behaviors collectively, we can assess whether certain behaviors become more or less frequent as groups grow larger.
+
+### **Visualizing the Data**
+
+#### **Group Size vs. Number of Vigilant Individuals**
+
+This plot will help me determine whether the number of vigilant individuals increases proportionally with group size or if there is a threshold beyond which additional vigilant individuals no longer contribute to reducing their risk.
+
+```{r, vigilance, warning=FALSE}
+observations %>%
+  left_join(group_behavior, by = "group_id") %>%  
+  ggplot(mapping = aes(x = total, 
+                       y = vigilant)) +  
+  geom_point(color = "navyblue", size = 2) +
+  labs(x = "Group Size",
+       y = "Count of Vigilant Animals",
+       title = "Group Size vs. Vigilance") +
+  theme_minimal()
+```
+
+#### **Group Size vs. Number of Animals Performing All Behaviors**
+
+To gain a broader perspective, I will compare group size with the total number of animals performing different behaviors. This will show whether some behaviors become more or less common as group size increases.
+
+```{r, all-behavior, warning=FALSE}
+observations %>%
+  left_join(group_behavior, by = "group_id") %>%  
+  pivot_longer(cols = c(foraging, 
+                        vigilant, 
+                        traveling, 
+                        bedded),
+               names_to = "behavior", 
+               values_to = "count") %>%  
+  ggplot(mapping = aes(x = total, 
+                       y = count, 
+                       color = behavior)) +
+  geom_point(size = 2) +  
+  labs(title = "Group Size vs. Behavioral Counts",
+       x = "Group Size",
+       y = "Count of Behavior",
+       color = "Behavior") +
+  theme_minimal()
+```
+
+------------------------------------------------------------------------
