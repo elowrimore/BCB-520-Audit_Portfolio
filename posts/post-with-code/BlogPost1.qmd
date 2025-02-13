@@ -2,7 +2,7 @@
 title: "Action-Target Pairs: Visualizing Bighorn Sheep Behavior"
 author: "Emily Lowrimore"
 date: "2025-02-13"
-categories: [visualisations, tidyverse]
+categories: [assignment, dataviz, tidyverse]
 ---
 
 ```{r, setup, echo=FALSE, warning=FALSE, message=FALSE}
