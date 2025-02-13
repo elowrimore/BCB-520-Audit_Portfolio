@@ -53,7 +53,7 @@ Because this dataset is **spatial geometry and time-based**, effective ways to v
 
 ### **Overview**
 
-This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into **group composition, social interactions, and activity patterns**, which complement the movement data.
+This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into group composition, social interactions, and activity patterns, which complement the movement data.
 
 ```{r, observations, echo=FALSE}
 
