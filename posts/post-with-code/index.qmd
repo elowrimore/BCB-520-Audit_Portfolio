@@ -1,7 +1,7 @@
 ---
 title: "Understanding My Data"
 author: "Emily Lowrimore"
-date: "2025-02-12"
+date: "2025-02-13"
 categories: [data-types]
 ---
 
@@ -26,7 +26,9 @@ This dataset consists of GPS locations recorded from collared bighorn sheep, tra
 ```{r, locations, echo=FALSE}
 
 locations <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Locations/04.24-08.24_locations_no-cleaning.csv")
-head(locations[c(2, 6, 7, 16)], 3)
+head(locations[c(2, 6, 7, 16)])
+
+
 ```
 
 ### **Key Attributes**
@@ -47,7 +49,6 @@ Because this dataset is **spatial geometry and time-based**, effective ways to v
 
 -   **Density plots** to highlight areas of high use.
 
-
 ## **Dataset 2: Field Observation Data (Tabular Data)**
 
 ### **Overview**
@@ -55,11 +56,9 @@ Because this dataset is **spatial geometry and time-based**, effective ways to v
 This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into **group composition, social interactions, and activity patterns**, which complement the movement data.
 
 ```{r, observations, echo=FALSE}
+
 observations <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/observations.csv")
 head(observations[c(1, 2, 7, 9:18)], 3)
-
-resight <- read.csv("C:/Users/emily/Documents/Project/Data/raw/Database/resight.csv")
-head(resight[c(2:4, 6)], 3)
 ```
 
 ### **Key Attributes**
@@ -81,4 +80,3 @@ Since this dataset is primarily **categorical and numerical**, useful visualizat
 -   **Box plots** to show variation in group size.
 
 -   **Stacked area charts** to illustrate changes in behavior over time.
-

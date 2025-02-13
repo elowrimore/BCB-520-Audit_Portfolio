@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
-<meta name="dcterms.date" content="2025-02-12">
+<meta name="author" content="Emily Lowrimore">
+<meta name="dcterms.date" content="2025-02-13">
 
 <title>Understanding My Data – BCB-520-Audit_Portfolio</title>
 <style>
@@ -117,9 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">Understanding My Data</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">data-types</div>
               </div>
                   </div>
   </div>
@@ -130,14 +128,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Harlow Malloc </p>
+               <p>Emily Lowrimore </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">February 12, 2025</p>
+        <p class="date">February 13, 2025</p>
       </div>
     </div>
     
@@ -174,22 +172,13 @@ ul.task-list li input[type="checkbox"] {
 <p>This dataset consists of GPS locations recorded from collared bighorn sheep, tracking their movements across the landscape. It allows me to analyze how individuals use different habitat types, how far they travel, and whether movement patterns change over time.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>  Collar.ID     Acq..Time..UTC.          SCTS..UTC.                SCTS..LMT.
-1     97223 2024-08-30 23:00:44 2024-09-05 14:02:05 2024-09-05 06:02:05-08:00
-2     97978 2024-08-30 23:00:43 2024-09-01 17:01:41 2024-09-01 09:01:41-08:00
-3     97975 2024-08-30 23:00:42 2024-08-31 14:01:03 2024-08-31 06:01:03-08:00
-   Origin Latitude..deg. Longitude..deg. Altitude..m. Dop Fix.Type
-1 Iridium       45.36915       -120.5096          590 2.0 3D Valid
-2 Iridium       45.42015       -120.4926          358 1.6 3D Valid
-3 Iridium       45.31014       -120.5707          314 1.8 3D Valid
-  Mortality.Status Temp...C. Main..V. Beacon..V.                   Animal
-1 Nothing Detected        33     3.36        3.6 Animal with Collar 97223
-2 Nothing Detected        41     3.44        3.6 Animal with Collar 97978
-3 Nothing Detected        43     3.44        3.6 Animal with Collar 97975
-  Collar.Name
-1     White46
-2    Purple02
-3    Yellow87</code></pre>
+<pre><code>      Acq..Time..UTC. Latitude..deg. Longitude..deg. Collar.Name
+1 2024-08-30 23:00:44       45.36915       -120.5096     White46
+2 2024-08-30 23:00:43       45.42015       -120.4926    Purple02
+3 2024-08-30 23:00:42       45.31014       -120.5707    Yellow87
+4 2024-08-30 23:00:42       45.31002       -120.5325    Yellow94
+5 2024-08-30 23:00:41       45.37524       -120.5178     White33
+6 2024-08-30 23:00:38       45.20790       -120.4905     White49</code></pre>
 </div>
 </div>
 </section>
@@ -218,24 +207,20 @@ ul.task-list li input[type="checkbox"] {
 <p>This dataset includes direct observations of bighorn sheep behavior, recorded in the field. It provides insight into <strong>group composition, social interactions, and activity patterns</strong>, which complement the movement data.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>  group_id      date n_observers lead_observer      lat      long habitat slope
-1  240520D 5/20/2024          NA               45.21563 -120.5502 outcrop   mid
-2  240521B 5/21/2024          NA               45.41892 -120.5050 outcrop   mid
-3  240522B 5/22/2024          NA               45.47276 -120.4737 outcrop   mid
-  aspect weather temp       location total ewes lambs year_ewes year_rams rams
-1     NE  cloudy   62 horseshoe bend     2    2     0         0         0    0
-2     SE  cloudy   52 devil's canyon     6    3     3         0         0    0
-3      N  cloudy   NA      hardstone    50   28    19         3         0    0
-  notes
-1    NA
-2    NA
-3    NA</code></pre>
+<pre><code>  group_id      date habitat aspect weather temp       location total ewes
+1  240520D 5/20/2024 outcrop     NE  cloudy   62 horseshoe bend     2    2
+2  240521B 5/21/2024 outcrop     SE  cloudy   52 devil's canyon     6    3
+3  240522B 5/22/2024 outcrop      N  cloudy   NA      hardstone    50   28
+  lambs year_ewes year_rams rams
+1     0         0         0    0
+2     3         0         0    0
+3    19         3         0    0</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  resight_id sheep_id   name  status      date group_id
-1 240517Ao60 orange60  baker nursing 5/17/2024  240517A
-2 240517Ap11 purple11 sister nursing 5/17/2024  240517A
-3 240517Aw35  white35   hood nursing 5/17/2024  240517A</code></pre>
+<pre><code>  sheep_id   name  status group_id
+1 orange60  baker nursing  240517A
+2 purple11 sister nursing  240517A
+3  white35   hood nursing  240517A</code></pre>
 </div>
 </div>
 </section>
